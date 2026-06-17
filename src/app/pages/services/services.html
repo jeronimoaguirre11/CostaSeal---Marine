@@ -1,1 +1,74 @@
-<p>services works!</p>
+<section class="carousel">
+  <div 
+    class="slide" 
+    [style.backgroundImage]="'url(' + images[currentIndex] + ')'"
+  >
+    <div class="overlay">
+      <h1>Our services</h1>
+      <p>High-quality marine restoration and sealing</p>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <h2>Recent Work</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="/img1.jpg" alt="">
+      <div class="info">
+        <h3>Boat Restoration</h3>
+        <p>Complete silicone sealing and surface restoration.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/img2.jpg" alt="">
+      <div class="info">
+        <h3>Yacht Maintenance</h3>
+        <p>High-quality finishing and protection work.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/logo.jpg" alt="">
+      <div class="info">
+        <h3>Residential Work</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam, alias ducimus, corporis numquam maxime velit similique architecto, quae laborum eligendi ipsum laudantium impedit rerum. Alias fuga necessitatibus reiciendis quam?</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="reviews">
+  <h1>What our clients say</h1>
+
+  <div class="review-card">
+    <div class="review-header">
+      <img src="/person1.jpg" alt="Client">
+      <div>
+        <h4>John Smith</h4>
+        <span>Boat Owner</span>
+      </div>
+    </div>
+    <p class="review-text">
+      "Amazing work, very professional and clean finish."
+    </p>
+  </div>
+
+  <div class="review-card">
+    <div class="review-header">
+      <img src="/person2.jpg" alt="Client">
+      <div>
+        <h4>Emily Johnson</h4>
+        <span>Yacht Client</span>
+      </div>
+    </div>
+    <p class="review-text">
+      "Highly recommended, great attention to detail."
+    </p>
+  </div>
+
+</section>
