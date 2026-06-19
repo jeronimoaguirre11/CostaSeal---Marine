@@ -1,74 +1,57 @@
-<section class="carousel">
-  <div 
-    class="slide" 
-    [style.backgroundImage]="'url(' + images[currentIndex] + ')'"
-  >
-    <div class="overlay">
-      <h1>Our services</h1>
-      <p>High-quality marine restoration and sealing</p>
-    </div>
-  </div>
+<section class="services-hero">
+  <p class="page-eyebrow">What We Do</p>
+  <h1>Dominate the Water</h1>
+  <p class="page-subtitle">Every service comes with a free quote and consultation.</p>
 </section>
 
 <section class="services">
-  <h2>Recent Work</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <img src="/img1.jpg" alt="">
-      <div class="info">
-        <h3>Boat Restoration</h3>
-        <p>Complete silicone sealing and surface restoration.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="/img2.jpg" alt="">
-      <div class="info">
-        <h3>Yacht Maintenance</h3>
-        <p>High-quality finishing and protection work.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="/logo.jpg" alt="">
-      <div class="info">
-        <h3>Residential Work</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam, alias ducimus, corporis numquam maxime velit similique architecto, quae laborum eligendi ipsum laudantium impedit rerum. Alias fuga necessitatibus reiciendis quam?</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="reviews">
-  <h1>What our clients say</h1>
-
-  <div class="review-card">
-    <div class="review-header">
-      <img src="/person1.jpg" alt="Client">
-      <div>
-        <h4>John Smith</h4>
-        <span>Boat Owner</span>
-      </div>
-    </div>
-    <p class="review-text">
-      "Amazing work, very professional and clean finish."
+  <div class="story-text">
+    <p>
+      where marine caulking is treated as an art form. We specialize exclusively in high-precision
+      sealing to keep your vessel flawlessly watertight and protected.
     </p>
   </div>
-
-  <div class="review-card">
-    <div class="review-header">
-      <img src="/person2.jpg" alt="Client">
-      <div>
-        <h4>Emily Johnson</h4>
-        <span>Yacht Client</span>
-      </div>
+  <div class="services-row">
+    <div class="service-col">
+      <img src="/SERVICE_H1.webp" alt="Teak Deck" />
+      <span class="service-num">01</span>
+      <h3>Teak Deck</h3>
+      <p>
+        Expert sealing and restoration of teak decks, removing failed sealant and applying
+        marine-grade silicone for a watertight, lasting finish.
+      </p>
     </div>
-    <p class="review-text">
-      "Highly recommended, great attention to detail."
-    </p>
-  </div>
 
+    <div class="service-col">
+      <img src="/SERVICE_H2.webp" alt="Hatch, Windows & Windscreens" />
+      <span class="service-num">02</span>
+      <h3>Hatch, Windows &amp; Windscreens</h3>
+      <p>
+        New installations and remedial silicone replacement for all types of marine glazing, from
+        portlights to panoramic windscreens.
+      </p>
+    </div>
+
+    <div class="service-col">
+      <img src="/SERVICE_H3.gif" alt="Marine Joinery" />
+      <span class="service-num">03</span>
+      <h3>Marine Joinery &amp; Wet Areas</h3>
+      <p>
+        Precision sealant work for heads, galleys, cabinetry, timber joinery and interior detailing.
+      </p>
+    </div>
+
+    <div class="service-col">
+      <img src="/SERVICE_H4.gif" alt="Remedial Caulking" />
+      <span class="service-num">04</span>
+      <h3>Remedial Caulking</h3>
+      <p>
+        Tailored solutions for any vessel, adapting to the unique technical requirements of every
+        project.
+      </p>
+    </div>
+  </div>
+  <div class="services-cta">
+    <a routerLink="/contacto" class="btn-quote">Get a Free Quote</a>
+  </div>
 </section>

@@ -1,67 +1,83 @@
-<section class="carousel">
-  <div 
-    class="slide" 
-    [style.backgroundImage]="'url(' + images[currentIndex] + ')'"
-  >
-    <div class="overlay">
-      <h1>Our Work</h1>
-      <p>High-quality marine restoration and sealing</p>
+<section class="about-hero">
+  <p class="page-eyebrow">About Costaseal</p>
+  <h1 class="page-title">Precision, Patience<br />&amp; Craftsmanship</h1>
+
+  <div class="arch-gallery">
+    <div class="arch-frame">
+      <img src="/FONDO_A3.webp" alt="Costaseal work 1" />
+    </div>
+    <div class="arch-frame featured">
+      <img src="/FONDO_A1.webp" alt="Costaseal work 2" />
+    </div>
+    <div class="arch-frame">
+      <img src="/FONDO_A2.webp" alt="Costaseal work 3" />
     </div>
   </div>
 </section>
 
-<section class="gallery">
-  <h2>Recent Work</h2>
+<section class="about-story">
+  <div class="story-text">
+    <h2>A craft built on experience</h2>
+    <p>
+      In a trade where shortcuts are common and patience is rare, Costaseal operates on a different
+      philosophy: precision, patience, and a refusal to rush the details.
+    </p>
+    <p>
+      Marine sealing is a demanding, hands-on craft. With over 6 years of dedicated experience
+      sealing commercial vessels and luxury builds, my approach is rooted in a career that began in
+      design and project management back in 2013. This background brings a structural understanding
+      of materials, strict project organization, and an uncompromising eye for clean visual lines to
+      every job.
+    </p>
+    <p>
+      A boat is a major investment and a passion; it deserves a level of care that ensures it is
+      both completely watertight and visually flawless. Whether collaborating with marine industry
+      professionals or working directly with owners, the focus remains entirely on the work, taking
+      the necessary time to deliver reliable and premium results.
+    </p>
+  </div>
 
-  <div class="grid">
-
-    <div class="card">
-      <img src="/img1.jpg" alt="">
-      <div class="info">
-        <h3>Boat Restoration</h3>
-        <p>Complete silicone sealing and surface restoration.</p>
+  <div class="story-accordion">
+    <div class="accordion-item" [class.open]="openAccordion === 1" (click)="toggleAccordion(1)">
+      <div class="accordion-header">
+        <span class="accordion-title">Precision &amp; Preparation</span>
+        <span class="accordion-icon">+</span>
+      </div>
+      <div class="accordion-body">
+        <p>Every seal is only as good as the prep work.</p>
+        <p>
+          I treat every boat as a "white-glove" environment, I take the time to protect surfaces and
+          prep my workspace. I make sure our "canvas" is safe and ready for a clean application.
+        </p>
       </div>
     </div>
 
-    <div class="card">
-      <img src="/img2.jpg" alt="">
-      <div class="info">
-        <h3>Yacht Maintenance</h3>
-        <p>High-quality finishing and protection work.</p>
+    <div class="accordion-item" [class.open]="openAccordion === 2" (click)="toggleAccordion(2)">
+      <div class="accordion-header">
+        <span class="accordion-title">Quality Materials</span>
+        <span class="accordion-icon">+</span>
+      </div>
+      <div class="accordion-body">
+        <p>
+          We specialize in tailored solutions. From selecting the optimal marine-grade materials
+          specifically suited for each project for enduring performance to adapting to the unique
+          technical requirements of owners, designers, and manufacturers, I ensure every sealing
+          process is flawlessly executed to specification
+        </p>
       </div>
     </div>
 
-    <div class="card">
-      <img src="/logo.jpg" alt="">
-      <div class="info">
-        <h3>Residential Work</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam, alias ducimus, corporis numquam maxime velit similique architecto, quae laborum eligendi ipsum laudantium impedit rerum. Alias fuga necessitatibus reiciendis quam?</p>
+    <div class="accordion-item" [class.open]="openAccordion === 3" (click)="toggleAccordion(3)">
+      <div class="accordion-header">
+        <span class="accordion-title">Professional Care</span>
+        <span class="accordion-icon">+</span>
+      </div>
+      <div class="accordion-body">
+        <p>
+          We believe in honest communication, keeping you updated every step of the way. The goal is
+          straightforward: to provide clean, reliable work and deliver results we are both proud of.
+        </p>
       </div>
     </div>
-
-        <div class="card">
-      <img src="/img1.jpg" alt="">
-      <div class="info">
-        <h3>Boat Restoration</h3>
-        <p>Complete silicone sealing and surface restoration.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="/img2.jpg" alt="">
-      <div class="info">
-        <h3>Yacht Maintenance</h3>
-        <p>High-quality finishing and protection work.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="/logo.jpg" alt="">
-      <div class="info">
-        <h3>Residential Work</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam, alias ducimus, corporis numquam maxime velit similique architecto, quae laborum eligendi ipsum laudantium impedit rerum. Alias fuga necessitatibus reiciendis quam?</p>
-      </div>
-    </div>
-
   </div>
 </section>

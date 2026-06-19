@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,24 +6,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.css',
 })
+export class Portfolio {
+  openAccordion: number | null = null;
 
-export class Portfolio implements OnInit {
-
-  images: string[] = [
-    '/img1.jpg',
-    '/img2.jpg',
-    '/logo.jpg'
-  ];
-
-  currentIndex = 0;
-
-  ngOnInit() {
-    setInterval(() => {
-      this.nextSlide();
-    }, 3000); // cambia cada 3 segundos
-  }
-
-  nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+  toggleAccordion(index: number) {
+    this.openAccordion = this.openAccordion === index ? null : index;
   }
 }

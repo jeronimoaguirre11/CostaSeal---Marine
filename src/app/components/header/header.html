@@ -1,15 +1,17 @@
-<nav class="navbar">
-  <div class="logo">
-    <img src="/logo.jpg" alt="Logo de CostaSeal Marine" width="50" height="50">
-  </div>
-  <div class="title">
-    CostaSeal Marine
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="logo" routerLink="">
+    <img src="/LOGO GRANDE.webp" alt="CostaSeal Marine" height="48" />
+    <!--<span class="logo-text">COSTA<span class="logo-accent">SEAL</span></span>-->
   </div>
 
   <ul class="menu">
-    <li><a routerLink="">Inicio</a></li>
-    <li><a routerLink="portafolio">Portafolio</a></li>
-    <li><a routerLink="servicios">Servicios</a></li>
-    <li><a routerLink="contacto">Contacto</a></li>
+    <li>
+      <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        >HOME</a
+      >
+    </li>
+    <li><a routerLink="portafolio" routerLinkActive="active">ABOUT</a></li>
+    <li><a routerLink="servicios" routerLinkActive="active">SERVICES</a></li>
+    <li><a routerLink="contacto" routerLinkActive="active">CONTACT</a></li>
   </ul>
 </nav>

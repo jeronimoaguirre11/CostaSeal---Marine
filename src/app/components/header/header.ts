@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -8,5 +8,10 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.css',
 })
 export class Header {
+  isScrolled = false;
 
+  @HostListener('window:scroll')
+  onScroll() {
+    this.isScrolled = window.scrollY > 40;
+  }
 }

@@ -1,68 +1,149 @@
-.carousel {
-  height: 80vh;
-  position: relative;
+.about-hero {
+  padding: 140px 48px 80px;
+  text-align: center;
+  background: #111820;
 }
 
-.slide {
+.page-eyebrow {
+  font-size: 20px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #5aa8b8;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 300;
+  color: white;
+  line-height: 1.15;
+  margin-bottom: 64px;
+}
+
+.arch-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 32px;
+  align-items: end;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.arch-frame {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 200px 200px 0 0;
+  overflow: hidden;
+  border: 1px solid rgba(90, 168, 184, 0.25);
+}
+
+.arch-frame.featured {
+  aspect-ratio: 3/4.3;
+}
+
+.arch-frame img {
+  display: block;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── ABOUT STORY ────────────────────────────── */
+.about-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 96px 64px;
+  background: #0a1f2e;
+  align-items: start;
+}
+
+.story-text h2 {
+  font-size: 40px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 24px;
+  line-height: 1.25;
+}
+
+.story-text p {
+  font-size: 18px;
+  color: rgba(232, 228, 220, 0.75);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.story-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── ACORDEONES ─────────────────────────────── */
+.story-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.accordion-item {
+  background: #111820;
+  border: 1px solid rgba(58, 125, 140, 0.12);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.accordion-item:hover {
+  border-color: rgba(90, 168, 184, 0.35);
+}
+
+.accordion-item.open {
+  border-color: #3a7d8c;
+}
+
+.accordion-header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 24px 28px;
 }
 
-.overlay {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 30px;
+.accordion-title {
+  font-size: 25px;
+  letter-spacing: 0.05em;
   color: white;
-  text-align: center;
-  border-radius: 10px;
+  font-weight: 400;
 }
 
-.slide {
-  transition: background-image 0.8s ease-in-out;
-}
-
-.gallery {
-  padding: 40px;
-}
-
-.gallery h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.accordion-icon {
+  font-size: 20px;
+  color: #5aa8b8;
+  font-weight: 300;
   transition: transform 0.3s;
+  line-height: 1;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.accordion-item.open .accordion-icon {
+  transform: rotate(45deg);
 }
 
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    padding 0.4s ease;
+  padding: 0 28px;
 }
 
-.info {
-  padding: 15px;
+.accordion-item.open .accordion-body {
+  max-height: 200px;
+  padding: 0 28px 24px;
 }
 
-.info h3 {
-  margin-bottom: 5px;
+.accordion-body p {
+  font-size: 18px;
+  color: rgba(232, 228, 220, 0.65);
+  line-height: 1.8;
+  font-weight: 300;
 }
