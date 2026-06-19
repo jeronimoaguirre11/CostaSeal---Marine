@@ -147,3 +147,45 @@
   line-height: 1.8;
   font-weight: 300;
 }
+
+/* MEDIA QUERY - Tablet y celular (≤900px)*/
+
+@media (max-width: 900px) {
+  /* STORY: de 2 columnas a 1 sola, texto arriba, acordeones abajo */
+  .about-story {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 64px 24px;
+  }
+
+  .story-text h2 {
+    font-size: 28px;
+  }
+
+  .story-text p {
+    font-size: 15px;
+  }
+
+  .accordion-title {
+    font-size: 17px;
+  }
+
+  .accordion-body p {
+    font-size: 15px;
+  }
+}
+
+/* MEDIA QUERY - Celular pequeño (≤480px)*/
+@media (max-width: 480px) {
+  .page-eyebrow {
+    font-size: 14px;
+  }
+
+  .accordion-header {
+    padding: 18px 20px;
+  }
+
+  .accordion-item.open .accordion-body {
+    padding: 0 20px 18px;
+  }
+}

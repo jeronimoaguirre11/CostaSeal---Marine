@@ -152,3 +152,58 @@
 .whatsapp-link:hover {
   color: #7bc4d4;
 }
+
+/* MEDIA QUERY - Tablet y celular (≤900px)*/
+
+@media (max-width: 900px) {
+  /* HERO */
+  .contact-hero {
+    height: 32vh;
+    min-height: 220px;
+    padding: 0 24px;
+  }
+
+  /* BODY: de 2 columnas a 1 sola, formulario arriba, imagen abajo */
+  .contact-body {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-wrap {
+    padding: 56px 24px;
+  }
+
+  .contact-form-wrap h3 {
+    font-size: 28px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+
+  .contact-image {
+    height: 320px;
+  }
+}
+
+/*MEDIA QUERY - Celular pequeño (≤480px) */
+
+@media (max-width: 480px) {
+  .contact-form-wrap h3 {
+    font-size: 24px;
+  }
+
+  .contact-alt {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .contact-image {
+    height: 260px;
+  }
+}

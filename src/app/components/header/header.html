@@ -1,7 +1,6 @@
 <nav class="navbar" [class.scrolled]="isScrolled">
   <div class="logo" routerLink="">
     <img src="/LOGO GRANDE.webp" alt="CostaSeal Marine" height="48" />
-    <!--<span class="logo-text">COSTA<span class="logo-accent">SEAL</span></span>-->
   </div>
 
   <ul class="menu">
@@ -14,4 +13,32 @@
     <li><a routerLink="servicios" routerLinkActive="active">SERVICES</a></li>
     <li><a routerLink="contacto" routerLinkActive="active">CONTACT</a></li>
   </ul>
+
+  <!-- botón hamburguesa, solo visible en móvil -->
+  <button class="burger" [class.open]="isMenuOpen" (click)="toggleMenu()" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+
+<!-- fondo oscuro detrás del menú lateral -->
+<div class="menu-overlay" [class.open]="isMenuOpen" (click)="closeMenu()"></div>
+
+<!-- panel lateral con los mismos 4 links, solo visible en móvil -->
+<div class="mobile-menu" [class.open]="isMenuOpen">
+  <ul>
+    <li>
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+        >HOME</a
+      >
+    </li>
+    <li><a routerLink="portafolio" routerLinkActive="active" (click)="closeMenu()">ABOUT</a></li>
+    <li><a routerLink="servicios" routerLinkActive="active" (click)="closeMenu()">SERVICES</a></li>
+    <li><a routerLink="contacto" routerLinkActive="active" (click)="closeMenu()">CONTACT</a></li>
+  </ul>
+</div>

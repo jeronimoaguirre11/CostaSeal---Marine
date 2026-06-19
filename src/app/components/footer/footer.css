@@ -110,3 +110,42 @@
 .instagram-link:hover {
   color: #0a1f2e;
 }
+
+/*MEDIA QUERY - Tablet y celular (≤900px)*/
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 48px 24px 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+
+  .footer-logo-image {
+    width: 180px;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+}
+
+/*MEDIA QUERY - Celular pequeño (≤480px)*/
+
+@media (max-width: 480px) {
+  .footer-logo-image {
+    width: 150px;
+  }
+
+  .footer-cta {
+    padding: 12px 28px;
+    font-size: 11px;
+  }
+}

@@ -255,3 +255,81 @@
   color: #e8e4dc;
   font-weight: 300;
 }
+
+/* MEDIA QUERY - Tablet y celular (≤900px)*/
+
+@media (max-width: 900px) {
+  /* HERO */
+  .hero-title {
+    white-space: normal;
+    font-size: clamp(26px, 6vw, 38px);
+  }
+
+  .hero-sub {
+    font-size: 14px;
+  }
+
+  /* SERVICIOS: de 2 columnas a 1 sola columna */
+  .services {
+    padding: 64px 24px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card img {
+    aspect-ratio: 16/9;
+  }
+
+  .service-info {
+    padding: 20px;
+  }
+
+  .service-info h3 {
+    font-size: 19px;
+  }
+
+  /* TESTIMONIOS: de 2 columnas a 1 sola columna */
+  .testimonials {
+    padding: 64px 24px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .testimonial {
+    padding: 32px 28px;
+  }
+
+  /* CTA FINAL */
+  .cta {
+    padding: 72px 24px;
+  }
+
+  .cta-box {
+    padding: 32px 40px;
+    min-width: 0;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/*MEDIA QUERY - Celular pequeño (≤480px)*/
+
+@media (max-width: 480px) {
+  .service-info h3 {
+    font-size: 17px;
+  }
+
+  .service-info p {
+    font-size: 12px;
+  }
+
+  .testimonial p {
+    font-size: 16px;
+  }
+}
