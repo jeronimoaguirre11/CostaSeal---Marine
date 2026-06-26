@@ -9,38 +9,57 @@
     <p class="form-intro">Fill out the form and we'll get back to you shortly.</p>
 
     <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-      <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI" />
+      <input type="hidden" name="access_key" value="84e49012-4451-436b-8aca-aa34ea17382c" />
       <input type="hidden" name="subject" value="New Quote Request - Costaseal Marine" />
 
       <div class="form-row">
         <div class="form-group">
           <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            minlength="2"
+            placeholder="Jane Smith"
+          />
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" required placeholder="jane@email.com" />
         </div>
       </div>
 
       <div class="form-group">
-        <label for="phone">Phone (optional)</label>
-        <input type="tel" id="phone" name="phone" />
+        <label for="phone">Phone</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          pattern="[0-9\s\+\-]{8,15}"
+          placeholder="0400 000 000"
+        />
       </div>
 
       <div class="form-group">
         <label for="message">Tell us about your vessel</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          minlength="10"
+          placeholder="Describe your vessel and what needs attention..."
+        ></textarea>
       </div>
 
       <button type="submit" class="btn-submit">Send Message</button>
     </form>
 
     <div class="contact-alt">
-      <p>Prefer WhatsApp?</p>
-      <a href="https://wa.me/61416685034" target="_blank" class="whatsapp-link"
-        >Chat with us directly</a
-      >
+      <p>Prefer send a text message?</p>
+      <a href="sms:+61416685034" target="_blank" class="whatsapp-link">Chat with us directly</a>
     </div>
   </div>
 
